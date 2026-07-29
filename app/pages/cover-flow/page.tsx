@@ -212,7 +212,7 @@ export default function CoverflowThreeJS() {
           ))}
         </Canvas>
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-12 w-4/5 max-w-xl z-10">
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-12 w-4/5 z-10">
         <input
           type="range"
           min={0}
@@ -220,8 +220,7 @@ export default function CoverflowThreeJS() {
           step={0.01}
           value={sliderValue}
           onChange={handleSliderChange}
-          className="coverflow-range"
-          style={{ "--slider-fill": `${sliderValue * 100}%` } as React.CSSProperties}
+          className="coverflow-range w-full"
         />
       </div>
     </div>
