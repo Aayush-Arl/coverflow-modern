@@ -221,6 +221,7 @@ export default function CoverflowThreeJS() {
           value={sliderValue}
           onChange={handleSliderChange}
           className="coverflow-range"
+          style={{ "--slider-fill": `${sliderValue * 100}%` } as React.CSSProperties}
         />
       </div>
     </div>
