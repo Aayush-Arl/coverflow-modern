@@ -82,6 +82,18 @@ Make sure to deploy the output of `npm run build`
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
+## Releasing
+
+Commit messages must follow [Conventional Commits](https://www.conventionalcommits.org/) (e.g. `feat: add keyboard navigation`, `fix: correct swipe direction`). This is enforced locally via a `commit-msg` git hook (husky + commitlint) and again in CI on every push/PR.
+
+To cut a new release (bumps the version in `package.json`, updates `CHANGELOG.md`, and creates a version commit + git tag based on commits since the last release):
+
+```bash
+npm run release
+```
+
+Use `npm run release:dry` to preview the next version and changelog without writing anything.
+
 ---
 
 Built with ❤️ using React Router.
