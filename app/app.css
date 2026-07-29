@@ -14,3 +14,56 @@ body {
     color-scheme: dark;
   }
 }
+
+.coverflow-range {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.coverflow-range::-webkit-slider-runnable-track {
+  width: 30%;
+  height: 12px;
+  background: #000;
+  border-radius: 10px;
+  border: 1px #777 solid;
+}
+
+.coverflow-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  width: 30%;
+  border-radius: 10px;
+  border: 1px #000 solid;
+  background: #777;
+}
+
+.coverflow-range::-moz-range-track {
+  width: 30%;
+  height: 12px;
+  background: #000;
+  border-radius: 10px;
+  border: 1px #777 solid;
+}
+
+.coverflow-range::-moz-range-thumb {
+  height: 10px;
+  width: 30%;
+  border-radius: 10px;
+  border: 1px #000 solid;
+  background: #777;
+}
+
+.coverflow-range:focus {
+  outline: rgba(255, 255, 255, 0.2) solid 2px;
+}
+
+.coverflow-range:focus::-webkit-slider-runnable-track {
+  background: #222;
+}
+
+.coverflow-range:focus::-moz-range-track {
+  background: #222;
+}
