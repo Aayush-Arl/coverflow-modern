@@ -11,6 +11,7 @@ const SLIDE_SPACING_X = 80;
 const NUM_SLIDES = albumCovers.length;
 const ACTIVE_COLOR = new Color(0xffffff);
 const INACTIVE_COLOR = new Color(0x555555);
+const REFLECTION_COLOR = new Color(0x333333);
 
 type CardProps = {
   texture: Texture;
@@ -27,8 +28,9 @@ const Card = forwardRef<Group, CardProps>(function Card({ texture }, ref) {
         <planeGeometry args={[PLANE_WIDTH, PLANE_HEIGHT]} />
         <meshBasicMaterial
           map={texture}
+          color={REFLECTION_COLOR}
           transparent
-          opacity={0.2}
+          opacity={0.12}
           side={BackSide}
         />
       </mesh>
